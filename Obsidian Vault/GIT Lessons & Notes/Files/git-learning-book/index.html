@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Git &amp; GitHub — The Visual Developer Workflow</title>
+<meta name="description" content="An interactive, visual learning book for Git, GitHub, branches, pull requests, environments, and CI/CD — built for complete beginners.">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<a href="#main-content" class="skip-link">Skip to content</a>
+
+<div class="mobile-topbar">
+  <button id="mobile-menu-btn" type="button" aria-label="Open navigation">☰</button>
+  <span class="name">Git &amp; GitHub — Visual Workflow</span>
+  <button id="open-search-mobile" type="button" aria-label="Search" style="margin-left:auto">⌘K</button>
+</div>
+<div class="sidebar-backdrop" id="sidebar-backdrop"></div>
+
+<div id="app-shell">
+
+  <aside class="sidebar" id="sidebar" aria-label="Course navigation">
+    <button class="sidebar-brand" id="sidebar-brand-btn" type="button">
+      <span class="mark">G</span>
+      <span>
+        <span class="name" style="display:block">Git &amp; GitHub</span>
+        <span class="sub">Visual Developer Workflow</span>
+      </span>
+    </button>
+
+    <div class="progress-block">
+      <div class="progress-label"><span>Overall progress</span><span id="progress-label">0%</span></div>
+      <div class="progress-track"><div class="progress-fill" id="progress-fill"></div></div>
+    </div>
+
+    <div class="sidebar-search">
+      <button id="open-search" type="button" style="width:100%;text-align:left;background:var(--bg-elev-2);border:1px solid var(--border);color:var(--text-faint);border-radius:8px;padding:8px 10px;font-size:12.5px;cursor:pointer;">🔍 Search… <span style="float:right;opacity:.6">Ctrl K</span></button>
+    </div>
+
+    <nav class="side-nav" id="side-nav" aria-label="Levels and resources"></nav>
+
+    <div class="sidebar-footer">
+      <button class="theme-toggle" id="theme-toggle" type="button">🌗 Theme</button>
+      <button class="reset-btn" id="reset-progress" type="button">Reset progress</button>
+    </div>
+  </aside>
+
+  <div class="main-wrap">
+    <main id="main-content" tabindex="-1"></main>
+  </div>
+</div>
+
+<div class="search-overlay" id="search-overlay" hidden>
+  <div class="search-modal">
+    <input id="search-input" type="text" placeholder="Search levels, commands, glossary…" aria-label="Search">
+    <div class="search-results" id="search-results"></div>
+  </div>
+</div>
+
+<script src="js/data.js"></script>
+<script src="js/state.js"></script>
+<script src="js/render.js"></script>
+<script src="js/widgets.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
