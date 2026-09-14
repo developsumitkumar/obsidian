@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "PROJECT/3. SQL_Mastery_Capstone_Project/My SQL > Capstone Project Submission.md",
+                "file": "PROJECT/3. SQL_Mastery_Capstone_Project/My_SQL___Capstone_Project_Submission_GIT.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "My SQL > Capstone Project Submission"
+              "title": "My_SQL___Capstone_Project_Submission_GIT"
             }
           },
           {
@@ -97,7 +97,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 299.3359375
+    "width": 451.5625
   },
   "right": {
     "id": "6267657135389b67",
@@ -113,7 +113,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "PROJECT/3. SQL_Mastery_Capstone_Project/My SQL > Capstone Project Submission.md",
+                "file": "PROJECT/3. SQL_Mastery_Capstone_Project/My_SQL___Capstone_Project_Submission_GIT.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -203,9 +203,10 @@
   },
   "active": "ca83643f246196ae",
   "lastOpenFiles": [
-    "PROJECT/3. SQL_Mastery_Capstone_Project/attachments/Pasted image 20260914165737.png",
-    "PROJECT/3. SQL_Mastery_Capstone_Project/SQL_Mastery_Capstone_Project_and_Lifetime_Reference_Final.md",
     "PROJECT/3. SQL_Mastery_Capstone_Project/My SQL > Capstone Project Submission.md",
+    "PROJECT/3. SQL_Mastery_Capstone_Project/My_SQL___Capstone_Project_Submission_GIT.md",
+    "PROJECT/3. SQL_Mastery_Capstone_Project/SQL_Mastery_Capstone_Project_and_Lifetime_Reference_Final.md",
+    "PROJECT/3. SQL_Mastery_Capstone_Project/attachments/Pasted image 20260914165737.png",
     "PROJECT/3. SQL_Mastery_Capstone_Project/attachments/Pasted image 20260914161129.png",
     "PROJECT/3. SQL_Mastery_Capstone_Project/attachments/Pasted image 20260914160810.png",
     "PROJECT/3. SQL_Mastery_Capstone_Project/attachments/Pasted image 20260914160452.png",
@@ -215,7 +216,6 @@
     "PROJECT/3. SQL_Mastery_Capstone_Project/attachments/Pasted image 20260914124957.png",
     "PROJECT/3. SQL_Mastery_Capstone_Project/attachments/Pasted image 20260914124856.png",
     "PROJECT/3. SQL_Mastery_Capstone_Project/attachments/Pasted image 20260914124801.png",
-    "PROJECT/3. SQL_Mastery_Capstone_Project/attachments/Pasted image 20260914124653.png",
     "PROJECT/3. SQL_Mastery_Capstone_Project/attachments",
     "PROJECT/1. FinVault_Data_Platform_Cursor_Docs/08_PHASE_7_POLISH.md",
     "PROJECT/1. FinVault_Data_Platform_Cursor_Docs/02_PHASE_1_APPLICATION.md",
