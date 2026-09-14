@@ -1,0 +1,602 @@
+
+
+  ##Easy
+   
+
+**Q1.** Find all Zomato customers whose `total_spent` is above the overall average spend.
+
+```sql
+
+SELECT name, city, total_spent
+
+FROM zomato_customers
+
+WHERE total_spent > (SELECT AVG(total_spent) FROM zomato_customers);
+
+```
+
+  
+
+**Q2.** Find all hospital bills in `payment` whose `total_amount` is above the overall average bill amount.
+
+```sql
+
+SELECT bill_id, patient_id, total_amount
+
+FROM payment
+
+WHERE total_amount > (SELECT AVG(total_amount) FROM payment);
+
+```
+
+  
+
+**Q3.** Find the Zomato customer(s) with the HIGHEST `total_orders`.
+
+```sql
+
+SELECT name, city, total_orders
+
+FROM zomato_customers
+
+WHERE total_orders = (SELECT MAX(total_orders) FROM zomato_customers);
+
+```
+
+  
+
+**Q4.** Find all medicines priced above the average `unit_price`.
+
+```sql
+
+SELECT medicine_name, unit_price
+
+FROM medicine
+
+WHERE unit_price > (SELECT AVG(unit_price) FROM medicine);
+
+```
+
+  
+
+**Q5.** Find the single most expensive `lab_test` in the hospital.
+
+```sql
+
+SELECT test_name, cost
+
+FROM lab_test
+
+WHERE cost = (SELECT MAX(cost) FROM lab_test);
+
+```
+
+  
+
+**Q6.** Find all doctors who joined AFTER the earliest-joining doctor.
+
+```sql
+
+SELECT doctor_name, joining_date
+
+FROM doctor
+
+WHERE joining_date > (SELECT MIN(joining_date) FROM doctor);
+
+```
+
+  
+
+**Q7.** Find all Zomato customers whose `total_orders` is below the average `total_orders`.
+
+```sql
+
+SELECT name, city, total_orders
+
+FROM zomato_customers
+
+WHERE total_orders < (SELECT AVG(total_orders) FROM zomato_customers);
+
+```
+
+  
+
+**Q8.** Find the treatment(s) with the LOWEST `cost` in the entire hospital.
+
+```sql
+
+SELECT treatment_name, cost
+
+FROM treatment
+
+WHERE cost = (SELECT MIN(cost) FROM treatment);
+
+```
+
+  
+
+**Q9.** Find all patients who registered on the SAME `registration_date` as the very first patient ever registered.
+
+```sql
+
+SELECT first_name, last_name, registration_date
+
+FROM patient
+
+WHERE registration_date = (SELECT MIN(registration_date) FROM patient);
+
+```
+
+  
+
+**Q10.** Find all Zomato customers who prefer the SAME payment method as the customer with the highest `total_spent`.
+
+```sql
+
+SELECT name, preferred_payment, total_spent
+
+FROM zomato_customers
+
+WHERE preferred_payment = (
+
+    SELECT preferred_payment
+
+    FROM zomato_customers
+
+    WHERE total_spent = (SELECT MAX(total_spent) FROM zomato_customers)
+
+);
+
+```
+
+  
+
+---
+
+  
+
+##  MEDIUM
+
+  
+
+**Q11.** Find all patients who have HAD at least one appointment (using `IN`).
+
+```sql
+
+SELECT patient_id, first_name, last_name
+
+FROM patient
+
+WHERE patient_id IN (SELECT patient_id FROM appointment);
+
+```
+
+  
+
+**Q12.** Find all patients who have NEVER been admitted to the hospital.
+
+```sql
+
+SELECT p.patient_id, p.first_name, p.last_name
+
+FROM patient p
+
+WHERE NOT EXISTS (
+
+    SELECT 1 FROM admission a WHERE a.patient_id = p.patient_id
+
+);
+
+```
+
+  
+
+**Q13.** Find all Zomato customers whose `city` average `total_spent` exceeds ₹25,000.
+
+```sql
+
+SELECT city_avg.city, city_avg.avg_spend
+
+FROM (
+
+    SELECT city, AVG(total_spent) AS avg_spend
+
+    FROM zomato_customers
+
+    GROUP BY city
+
+) AS city_avg
+
+WHERE city_avg.avg_spend > 25000;
+
+```
+
+  
+
+**Q14.** Find all treatments whose `cost` is above the AVERAGE cost for their OWN `diagnosis_id`.
+
+```sql
+
+SELECT t1.treatment_id, t1.treatment_name, t1.cost, t1.diagnosis_id
+
+FROM treatment t1
+
+WHERE t1.cost > (
+
+    SELECT AVG(t2.cost)
+
+    FROM treatment t2
+
+    WHERE t2.diagnosis_id = t1.diagnosis_id
+
+);
+
+```
+
+  
+
+**Q15.** Find any duplicate customer signups in `zomato_customers` sharing the same `email`.
+
+```sql
+
+SELECT *
+
+FROM zomato_customers
+
+WHERE email IN (
+
+    SELECT email FROM zomato_customers GROUP BY email HAVING COUNT(*) > 1
+
+);
+
+```
+
+  
+
+**Q16.** Find all patients who have made at least one payment with `bill_status = 'Pending'`.
+
+```sql
+
+SELECT patient_id, first_name, last_name
+
+FROM patient
+
+WHERE patient_id IN (
+
+    SELECT patient_id FROM payment WHERE bill_status = 'Pending'
+
+);
+
+```
+
+  
+
+**Q17.** Find all Zomato customers whose `total_spent` is above the average `total_spent` for THEIR OWN `favourite_cuisine` group.
+
+```sql
+
+SELECT c1.name, c1.favourite_cuisine, c1.total_spent
+
+FROM zomato_customers c1
+
+WHERE c1.total_spent > (
+
+    SELECT AVG(c2.total_spent)
+
+    FROM zomato_customers c2
+
+    WHERE c2.favourite_cuisine = c1.favourite_cuisine
+
+);
+
+```
+
+  
+
+**Q18.** Find all doctors who belong to the 'Cardiology' department.
+
+```sql
+
+SELECT doctor_name, specialization
+
+FROM doctor
+
+WHERE doctor_id IN (
+
+    SELECT dd.doctor_id
+
+    FROM doctor_department dd
+
+    JOIN department d ON dd.department_id = d.department_id
+
+    WHERE d.department_name = 'Cardiology'
+
+);
+
+```
+
+  
+
+**Q19.** Find the SECOND highest `total_spent` value among Zomato customers (without window functions).
+
+```sql
+
+SELECT MAX(total_spent) AS second_highest_spend
+
+FROM zomato_customers
+
+WHERE total_spent < (SELECT MAX(total_spent) FROM zomato_customers);
+
+```
+
+  
+
+**Q20.** Find all patients who have NEVER had a `lab_test` done.
+
+```sql
+
+SELECT p.patient_id, p.first_name, p.last_name
+
+FROM patient p
+
+WHERE NOT EXISTS (
+
+    SELECT 1 FROM lab_test l WHERE l.patient_id = p.patient_id
+
+);
+
+```
+
+  
+
+---
+
+  
+
+##  HARD
+
+  
+
+**Q21.** Find the FULL ROW of the highest-cost `treatment` PER `diagnosis_id`.
+
+```sql
+
+SELECT t1.treatment_id, t1.diagnosis_id, t1.treatment_name, t1.cost
+
+FROM treatment t1
+
+WHERE t1.cost = (
+
+    SELECT MAX(t2.cost)
+
+    FROM treatment t2
+
+    WHERE t2.diagnosis_id = t1.diagnosis_id
+
+);
+
+```
+
+  
+
+**Q22.** Find every Zomato customer whose `total_spent` is above THEIR OWN city's average — restricted to only verified (`is_verified = 1`) customers, in both the comparison and the result.
+
+```sql
+
+SELECT c1.id, c1.name, c1.city, c1.total_spent
+
+FROM zomato_customers c1
+
+WHERE c1.is_verified = 1
+
+  AND c1.total_spent > (
+
+      SELECT AVG(c2.total_spent)
+
+      FROM zomato_customers c2
+
+      WHERE c2.city = c1.city
+
+        AND c2.is_verified = 1
+
+  );
+
+```
+
+  
+
+**Q23.** Find all patients who have been prescribed a medicine costing MORE than the average `unit_price` across all medicines they've personally been prescribed.
+
+```sql
+
+SELECT DISTINCT p.patient_id, p.first_name, p.last_name
+
+FROM patient p
+
+JOIN admission ad ON ad.patient_id = p.patient_id
+
+JOIN diagnosis d ON d.admission_id = ad.admission_id
+
+JOIN treatment t ON t.diagnosis_id = d.diagnosis_id
+
+JOIN prescription pr ON pr.treatment_id = t.treatment_id
+
+JOIN medicine m ON m.medicine_id = pr.medicine_id
+
+WHERE m.unit_price > (
+
+    SELECT AVG(m2.unit_price)
+
+    FROM prescription pr2
+
+    JOIN medicine m2 ON m2.medicine_id = pr2.medicine_id
+
+    JOIN treatment t2 ON t2.treatment_id = pr2.treatment_id
+
+    JOIN diagnosis d2 ON d2.diagnosis_id = t2.diagnosis_id
+
+    JOIN admission ad2 ON ad2.admission_id = d2.admission_id
+
+    WHERE ad2.patient_id = p.patient_id
+
+);
+
+```
+
+  
+
+**Q24.** Rewrite Q12 ("patients never admitted") as an equivalent `LEFT JOIN` + `IS NULL` query.
+
+```sql
+
+SELECT p.patient_id, p.first_name, p.last_name
+
+FROM patient p
+
+LEFT JOIN admission a ON a.patient_id = p.patient_id
+
+WHERE a.admission_id IS NULL;
+
+```
+
+  
+
+**Q25.** Find insurance policyholders whose `coverage_amount` is above the average coverage for their OWN `insurance_provider`.
+
+```sql
+
+SELECT i1.patient_id, i1.insurance_provider, i1.coverage_amount
+
+FROM insurance i1
+
+WHERE CAST(i1.coverage_amount AS DECIMAL(10,2)) > (
+
+    SELECT AVG(CAST(i2.coverage_amount AS DECIMAL(10,2)))
+
+    FROM insurance i2
+
+    WHERE i2.insurance_provider = i1.insurance_provider
+
+);
+
+```
+
+  
+
+**Q26.** Find all Zomato customers who signed up (`created_at`) BEFORE the earliest-registered patient's `registration_date` in the Hospital database.
+
+```sql
+
+SELECT name, city, created_at
+
+FROM zomato_customers
+
+WHERE created_at < (
+
+    SELECT MIN(registration_date) FROM Hospital_Records.dbo.patient
+
+);
+
+```
+
+  
+
+**Q27.** Find every `diagnosis_name` where the total treatment cost (summed across all treatments) exceeds the OVERALL average total-cost-per-diagnosis.
+
+```sql
+
+SELECT d.diagnosis_id, d.diagnosis_name, SUM(t.cost) AS total_treatment_cost
+
+FROM diagnosis d
+
+JOIN treatment t ON t.diagnosis_id = d.diagnosis_id
+
+GROUP BY d.diagnosis_id, d.diagnosis_name
+
+HAVING SUM(t.cost) > (
+
+    SELECT AVG(diagnosis_totals.total_cost)
+
+    FROM (
+
+        SELECT diagnosis_id, SUM(cost) AS total_cost
+
+        FROM treatment
+
+        GROUP BY diagnosis_id
+
+    ) AS diagnosis_totals
+
+);
+
+```
+
+  
+
+**Q28.** Identify Zomato customers who are the ONLY customer from their `pincode`.
+
+```sql
+
+SELECT c1.name, c1.city, c1.pincode
+
+FROM zomato_customers c1
+
+WHERE (
+
+    SELECT COUNT(*)
+
+    FROM zomato_customers c2
+
+    WHERE c2.pincode = c1.pincode
+
+) = 1;
+
+```
+
+  
+
+**Q29.** Find all appointments for patients who have NEVER had a 'Critical' severity diagnosis.
+
+```sql
+
+SELECT ap.appoinment_id, ap.patient_id, ap.doctor_id, d.specialization
+
+FROM appointment ap
+
+JOIN doctor d ON d.doctor_id = ap.doctor_id
+
+WHERE NOT EXISTS (
+
+    SELECT 1
+
+    FROM admission adm
+
+    JOIN diagnosis dg ON dg.admission_id = adm.admission_id
+
+    WHERE adm.patient_id = ap.patient_id
+
+      AND dg.severity = 'Critical'
+
+);
+
+```
+
+  
+
+**Q30.** For each Zomato `city`, find the customer with the HIGHEST `total_spent` (full row, no window functions).
+
+```sql
+
+SELECT c1.id, c1.name, c1.city, c1.total_spent
+
+FROM zomato_customers c1
+
+WHERE c1.total_spent = (
+
+    SELECT MAX(c2.total_spent)
+
+    FROM zomato_customers c2
+
+    WHERE c2.city = c1.city
+
+);

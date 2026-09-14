@@ -267,7 +267,6 @@ ORDER BY CASE loyalty_tier WHEN 'Gold' THEN 1 WHEN 'Silver' THEN 2 ELSE 3 END;
 
 ##  The Full Course, One Page
 
-
 | # | Topic | Core Question It Answers | Your Go-To Pattern |
 |---|---|---|---|
 | 1 | **JOINs** | "I need data spread across multiple tables, combined." | `INNER/LEFT/RIGHT/FULL JOIN ... ON A.key = B.key` |
