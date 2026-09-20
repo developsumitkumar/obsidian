@@ -1,4 +1,4 @@
-![[ChatGPT Image Sep 20, 2026, 07_40_05 PM.png]]
+![Delta Lake Architecture](attachments/delta-lake-architecture.png)
 ## 1. Definition
 
 **Delta Lake is an open-source table/storage framework that adds database-like reliability and transaction management to data stored in a Data Lake.**
