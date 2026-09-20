@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Pipeline/LAKE/Data Lakehouse.md",
+                "file": "Pipeline/LAKE/Data Lake.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Data Lakehouse"
+              "title": "Data Lake"
             }
           }
         ],
@@ -114,7 +114,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Pipeline/LAKE/Data Lakehouse.md",
+                "file": "Pipeline/LAKE/Data Lake.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -205,12 +205,14 @@
   },
   "active": "fbcd79207453c41b",
   "lastOpenFiles": [
+    "Pipeline/LAKE/Data Lakehouse.md",
     "Pipeline/LAKE/Delta Lake.md",
+    "Pipeline/LAKE/attachments/data-lake-architecture.png",
+    "Pipeline/LAKE/attachments/delta-lake-architecture.png",
     "Pipeline/LAKE/attachments/data_lakehouse.png",
     "Pipeline/LAKE/attachments/data-lake-architecture.png.png",
     "Pipeline/LAKE/attachments/delta-lake-architecture.png.png",
     "Pipeline/LAKE/attachments/ChatGPT Image Sep 20, 2026, 07_40_05 PM.png",
-    "Pipeline/LAKE/Data Lakehouse.md",
     "Pipeline/LAKE/Data Lake.md",
     "Pipeline/LAKE/attachments/ChatGPT Image Sep 20, 2026, 07_39_04 PM.png",
     "Pipeline/LAKE/attachments",
@@ -232,8 +234,6 @@
     "PROJECT/3. SQL_Mastery_Capstone_Project/attachments/Pasted image 20260914165737.png",
     "PROJECT/3. SQL_Mastery_Capstone_Project/attachments/Pasted image 20260914161129.png",
     "PROJECT/3. SQL_Mastery_Capstone_Project/attachments/Pasted image 20260914160810.png",
-    "PROJECT/3. SQL_Mastery_Capstone_Project/attachments/Pasted image 20260914160452.png",
-    "PROJECT/3. SQL_Mastery_Capstone_Project/attachments/Pasted image 20260914160202.png",
     "PROJECT/3. SQL_Mastery_Capstone_Project/attachments",
     "PROJECT/1. FinVault_Data_Platform_Cursor_Docs/08_PHASE_7_POLISH.md",
     "PROJECT/1. FinVault_Data_Platform_Cursor_Docs/02_PHASE_1_APPLICATION.md",
