@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Pipeline/LAKE/Delta Lake.md",
+                "file": "Pipeline/LAKE/Data Lakehouse.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Delta Lake"
+              "title": "Data Lakehouse"
             }
           }
         ],
@@ -114,7 +114,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Pipeline/LAKE/Delta Lake.md",
+                "file": "Pipeline/LAKE/Data Lakehouse.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -205,13 +205,16 @@
   },
   "active": "fbcd79207453c41b",
   "lastOpenFiles": [
+    "Pipeline/LAKE/Delta Lake.md",
+    "Pipeline/LAKE/attachments/data_lakehouse.png",
+    "Pipeline/LAKE/attachments/data-lake-architecture.png.png",
+    "Pipeline/LAKE/attachments/delta-lake-architecture.png.png",
     "Pipeline/LAKE/attachments/ChatGPT Image Sep 20, 2026, 07_40_05 PM.png",
     "Pipeline/LAKE/Data Lakehouse.md",
     "Pipeline/LAKE/Data Lake.md",
     "Pipeline/LAKE/attachments/ChatGPT Image Sep 20, 2026, 07_39_04 PM.png",
     "Pipeline/LAKE/attachments",
     "Pipeline/00 Roadmap.md",
-    "Pipeline/LAKE/Delta Lake.md",
     "Pipeline/LAKE",
     "Untitled.md",
     "PROJECT/3. SQL_Mastery_Capstone_Project/My SQL > Capstone Project Submission.md",
@@ -231,10 +234,6 @@
     "PROJECT/3. SQL_Mastery_Capstone_Project/attachments/Pasted image 20260914160810.png",
     "PROJECT/3. SQL_Mastery_Capstone_Project/attachments/Pasted image 20260914160452.png",
     "PROJECT/3. SQL_Mastery_Capstone_Project/attachments/Pasted image 20260914160202.png",
-    "PROJECT/3. SQL_Mastery_Capstone_Project/attachments/Pasted image 20260914160134.png",
-    "PROJECT/3. SQL_Mastery_Capstone_Project/attachments/Hospital_Billing_ERD_from_paragraph.png",
-    "PROJECT/3. SQL_Mastery_Capstone_Project/attachments/Pasted image 20260914124957.png",
-    "PROJECT/3. SQL_Mastery_Capstone_Project/attachments/Pasted image 20260914124856.png",
     "PROJECT/3. SQL_Mastery_Capstone_Project/attachments",
     "PROJECT/1. FinVault_Data_Platform_Cursor_Docs/08_PHASE_7_POLISH.md",
     "PROJECT/1. FinVault_Data_Platform_Cursor_Docs/02_PHASE_1_APPLICATION.md",

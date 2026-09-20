@@ -1,4 +1,4 @@
-
+![Delta Lake Architecture](attachments/data_lakehouse.png)
 
 To understand a **Data Lakehouse**, first remember why it exists.
 
