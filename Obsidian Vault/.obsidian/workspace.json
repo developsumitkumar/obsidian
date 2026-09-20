@@ -13,30 +13,15 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "PROJECT/2. PAN Validation/NOTES _ PAN_Validation_Project.md",
+                "file": "Pipeline/Delta Maintainance & Optimization/VACUUM in DeltaLake.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "NOTES _ PAN_Validation_Project"
-            }
-          },
-          {
-            "id": "fbcd79207453c41b",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Pipeline/LAKE/Data Lake.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Data Lake"
+              "title": "VACUUM in DeltaLake"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -98,7 +83,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 282.7890625
+    "width": 200
   },
   "right": {
     "id": "6267657135389b67",
@@ -114,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Pipeline/LAKE/Data Lake.md",
+                "file": "Pipeline/Delta Maintainance & Optimization/VACUUM in DeltaLake.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -203,28 +188,43 @@
       "bases:Create new base": false
     }
   },
-  "active": "fbcd79207453c41b",
+  "active": "ca83643f246196ae",
   "lastOpenFiles": [
-    "Pipeline/LAKE/Data Lakehouse.md",
+    "Pipeline/Delta Maintainance & Optimization/Z-ORDER in DeltaLake.md",
+    "Pipeline/Delta Maintainance & Optimization/VACUUM in DeltaLake.md",
+    "Pipeline/Delta Maintainance & Optimization/OPTIMIZE in DeltaLake.md",
+    "PROJECT/2. PAN Validation/NOTES _ PAN_Validation_Project.md",
+    "Pipeline/Delta Maintainance & Optimization/Z-ORDER in Delta Lake.md",
+    "Pipeline/Delta Maintainance & Optimization/OPTIMIZE in Delta Lake.md",
+    "Pipeline/Delta Maintainance & Optimization/VACUUM in Delta Lake.md",
     "Pipeline/LAKE/Delta Lake.md",
+    "Pipeline/LAKE/Data Lakehouse.md",
+    "Pipeline/LAKE/Data Lake.md",
+    "Pipeline/Delta Maintainance & Optimization",
+    "Pipeline/Write Operation/OverWrite + Append.md",
+    "Pipeline/DML Statements (Data Manipulation Language)/3. DELETE — Remove Existing Rows.md",
+    "Pipeline/Write Operation",
+    "Pipeline/DML Statements (Data Manipulation Language)/2. UPDATE — Change Existing Rows.md",
+    "Pipeline/DML Statements (Data Manipulation Language)/4. MERGE (upsert).md",
+    "Pipeline/DML Statements (Data Manipulation Language)/1. INSERT.md",
+    "Pipeline/DML Statements (Data Manipulation Language)",
+    "Pipeline/Untitled.md",
+    "Pipeline/data-pipeline-learning-notes_1.md",
     "Pipeline/LAKE/attachments/data-lake-architecture.png",
     "Pipeline/LAKE/attachments/delta-lake-architecture.png",
     "Pipeline/LAKE/attachments/data_lakehouse.png",
     "Pipeline/LAKE/attachments/data-lake-architecture.png.png",
     "Pipeline/LAKE/attachments/delta-lake-architecture.png.png",
     "Pipeline/LAKE/attachments/ChatGPT Image Sep 20, 2026, 07_40_05 PM.png",
-    "Pipeline/LAKE/Data Lake.md",
     "Pipeline/LAKE/attachments/ChatGPT Image Sep 20, 2026, 07_39_04 PM.png",
     "Pipeline/LAKE/attachments",
     "Pipeline/00 Roadmap.md",
     "Pipeline/LAKE",
     "Untitled.md",
     "PROJECT/3. SQL_Mastery_Capstone_Project/My SQL > Capstone Project Submission.md",
-    "Pipeline/data-pipeline-learning-notes_1.md",
     "Rough.md",
     "Untitled.canvas",
     "Pipeline",
-    "PROJECT/2. PAN Validation/NOTES _ PAN_Validation_Project.md",
     "PROJECT/2. PAN Validation/PAN Card Validation in SQL - Scripts/Problem Statement.pdf",
     "PROJECT/2. PAN Validation/PAN Card Validation in SQL - Scripts/PAN Number Validation - Problem Statement.pdf",
     "PROJECT/2. PAN Validation/PAN Card Validation in SQL - Scripts/Project Script.md",
@@ -236,20 +236,6 @@
     "PROJECT/3. SQL_Mastery_Capstone_Project/attachments/Pasted image 20260914160810.png",
     "PROJECT/3. SQL_Mastery_Capstone_Project/attachments",
     "PROJECT/1. FinVault_Data_Platform_Cursor_Docs/08_PHASE_7_POLISH.md",
-    "PROJECT/1. FinVault_Data_Platform_Cursor_Docs/02_PHASE_1_APPLICATION.md",
-    "PROJECT/1. FinVault_Data_Platform_Cursor_Docs/00_MASTER_PROJECT.md",
-    "SQL Shubham Sir/4.SQL_Window_Functions_Zomato_Hospital_Guide_Final.md",
-    "Python Shubham Sir/Python_Symbols_and_Operators_Cheat_Sheet.pdf",
-    "PROJECT/3. SQL_Mastery_Capstone_Project/Zomato App.session.sql",
-    "Python Shubham Sir/Untitled Python  Day 2 Operators & Type Conversion.md",
-    "Python Shubham Sir/Python_Day1_Basics_Complete_Training_Guide_Final.md",
-    "SQL Shubham Sir/YouTube Channels.md",
-    "SQL Shubham Sir/Sub Query ASSIGNMENT 25 AUG.md",
-    "SQL Shubham Sir/Project.md",
-    "SQL Shubham Sir/1. SQL Basic.md",
-    "SQL Shubham Sir/2.  SQL_Data_Modelling_Complete_Training_Guide.md",
-    "SQL Shubham Sir/3. SQL_JOINs_Reference.md",
-    "PROJECT/3. SQL_Mastery_Capstone_Project/Hospital_DB_postgres.sql",
-    "PROJECT/3. SQL_Mastery_Capstone_Project/Zomato_DB_postgres.sql"
+    "Python Shubham Sir/Python_Symbols_and_Operators_Cheat_Sheet.pdf"
   ]
 }
