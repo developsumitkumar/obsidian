@@ -1,5 +1,5 @@
 
-![[ChatGPT Image Sep 20, 2026, 07_39_04 PM.png]]
+![Delta Lake Architecture](attachments/data-lake-architecture.png)
 ## 1. Definition
 
 A **Data Lake** is a centralized storage system designed to store **large amounts of raw data in its original format**, regardless of whether the data is structured, semi-structured, or unstructured.
