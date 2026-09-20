@@ -47,6 +47,8 @@ and TRIM(pan_number) <> ''
 
 -- Function to check if adjacent characters are repetative. 
 -- Returns true if adjacent characters are adjacent else returns false
+
+
 create or replace function fn_check_adjacent_repetition(p_str text)
 returns boolean
 language plpgsql
@@ -67,6 +69,8 @@ $$
 
 -- Function to check if characters are sequencial such as ABCDE, LMNOP, XYZ etc. 
 -- Returns true if characters are sequencial else returns false
+
+
 CREATE or replace function fn_check_sequence(p_str text)
 returns boolean
 language plpgsql
