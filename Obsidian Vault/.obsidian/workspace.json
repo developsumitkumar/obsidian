@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Pipeline/Delta Maintainance & Optimization/VACUUM in DeltaLake.md",
+                "file": "Pipeline/Recovery & Management/CLONE in Delta Lake.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "VACUUM in DeltaLake"
+              "title": "CLONE in Delta Lake"
             }
           }
         ]
@@ -83,7 +83,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 370.6328125
   },
   "right": {
     "id": "6267657135389b67",
@@ -99,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Pipeline/Delta Maintainance & Optimization/VACUUM in DeltaLake.md",
+                "file": "Pipeline/Recovery & Management/CLONE in Delta Lake.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -190,8 +190,11 @@
   },
   "active": "ca83643f246196ae",
   "lastOpenFiles": [
-    "Pipeline/Delta Maintainance & Optimization/Z-ORDER in DeltaLake.md",
+    "Pipeline/Recovery & Management/RESTORE in Delta Lake.md",
+    "Pipeline/Recovery & Management/CLONE in Delta Lake.md",
+    "Pipeline/Recovery & Management",
     "Pipeline/Delta Maintainance & Optimization/VACUUM in DeltaLake.md",
+    "Pipeline/Delta Maintainance & Optimization/Z-ORDER in DeltaLake.md",
     "Pipeline/Delta Maintainance & Optimization/OPTIMIZE in DeltaLake.md",
     "PROJECT/2. PAN Validation/NOTES _ PAN_Validation_Project.md",
     "Pipeline/Delta Maintainance & Optimization/Z-ORDER in Delta Lake.md",
@@ -230,12 +233,9 @@
     "PROJECT/2. PAN Validation/PAN Card Validation in SQL - Scripts/Project Script.md",
     "Spark Ansh Lamba/pySpark.md",
     "PROJECT/3. SQL_Mastery_Capstone_Project/My_SQL___Capstone_Project_Submission_GIT.md",
-    "PROJECT/3. SQL_Mastery_Capstone_Project/SQL_Mastery_Capstone_Project_and_Lifetime_Reference_Final.md",
     "PROJECT/3. SQL_Mastery_Capstone_Project/attachments/Pasted image 20260914165737.png",
     "PROJECT/3. SQL_Mastery_Capstone_Project/attachments/Pasted image 20260914161129.png",
     "PROJECT/3. SQL_Mastery_Capstone_Project/attachments/Pasted image 20260914160810.png",
-    "PROJECT/3. SQL_Mastery_Capstone_Project/attachments",
-    "PROJECT/1. FinVault_Data_Platform_Cursor_Docs/08_PHASE_7_POLISH.md",
-    "Python Shubham Sir/Python_Symbols_and_Operators_Cheat_Sheet.pdf"
+    "PROJECT/3. SQL_Mastery_Capstone_Project/attachments"
   ]
 }
