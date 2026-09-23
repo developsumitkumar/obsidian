@@ -33,7 +33,7 @@ But Parquet itself is primarily a **file format**.
 
 It doesn't independently provide full table-level functionality such as:
 
-```
+```sql
 Transaction management
 Reliable concurrent writes
 Table version history
@@ -46,7 +46,7 @@ This becomes important when many Data Engineering jobs are continuously modifyin
 
 For example:
 
-```
+```python
 Spark Job A → writing new orders
 Spark Job B → updating existing orders
 Spark Job C → reading orders for analytics
@@ -64,7 +64,7 @@ Delta Lake provides that mechanism.
 
 Suppose we create a Delta table:
 
-```
+```python
 sales/
 │
 ├── part-0001.parquet
@@ -85,7 +85,7 @@ These contain the **actual rows and columns**.
 
 For example:
 
-```
+```sql
 OrderID | Product | Amount
 --------|---------|-------
 101     | Shirt   | 1500
@@ -99,7 +99,7 @@ This contains the **transaction history and metadata describing the table**.
 
 Conceptually, it may record:
 
-```
+```python
 Version 0
 ADD part-0001.parquet
 ADD part-0002.parquet
@@ -130,7 +130,7 @@ One of Delta Lake's most important features is **ACID transaction support**.
 
 ACID stands for:
 
-```
+```python
 A → Atomicity
 C → Consistency
 I → Isolation
@@ -139,7 +139,7 @@ D → Durability
 
 Consider a Spark job that needs to write four files:
 
-```
+```python
 A.parquet
 B.parquet
 C.parquet
@@ -154,7 +154,7 @@ With Delta Lake, the transaction is committed as a valid new table version only 
 
 Conceptually:
 
-```
+```python
 Before:
 
 Version 10
@@ -186,7 +186,7 @@ Delta Lake makes common table operations much easier.
 
 For example:
 
-```
+```sql
 UPDATE customers
 SET city = 'Bengaluru'
 WHERE customer_id = 101;
@@ -194,7 +194,7 @@ WHERE customer_id = 101;
 
 Or:
 
-```
+```sql
 DELETE FROM customers
 WHERE customer_id = 101;
 ```
@@ -207,7 +207,7 @@ MERGE
 
 Suppose yesterday's customer table contains:
 
-```
+```sql
 ID    Name       City
 101   Anshuman   Delhi
 102   Rahul      Mumbai
@@ -215,14 +215,14 @@ ID    Name       City
 
 Today you receive:
 
-```
+```sql
 101   Anshuman   Bangalore
 103   Priya      Pune
 ```
 
 You need to:
 
-```
+```sql
 101 → UPDATE existing customer
 103 → INSERT new customer
 ```
@@ -233,7 +233,7 @@ Delta Lake supports this using `MERGE`.
 
 Conceptually:
 
-```
+```sql
 MERGE INTO customers
 USING new_customers
 
@@ -252,7 +252,7 @@ This is extremely useful for incremental data pipelines and CDC-style workloads.
 
 Suppose your Delta table expects:
 
-```
+```sql
 customer_id → INTEGER
 name        → STRING
 amount      → DOUBLE
@@ -268,7 +268,7 @@ Sometimes, however, the schema genuinely needs to change.
 
 For example:
 
-```
+```sql
 OLD
 
 customer_id
@@ -278,7 +278,7 @@ amount
 
 Later the business introduces:
 
-```
+```sql
 customer_id
 name
 amount
@@ -299,7 +299,7 @@ Because Delta maintains versions of the table through its transaction log, previ
 
 Imagine:
 
-```
+```sql
 Version 0 → Monday
 Version 1 → Tuesday
 Version 2 → Wednesday
@@ -316,7 +316,7 @@ But perhaps Wednesday's pipeline accidentally changed something.
 
 You may be able to inspect an older version:
 
-```
+```sql
 SELECT *
 FROM sales
 VERSION AS OF 1;
