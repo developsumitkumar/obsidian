@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Data Engineering/01 . Data Architecture/4 Delta Lake/4.1 Delta lake Fundamentals/1 DML Statements (Data Manipulation Language)/4. MERGE (upsert).md",
+                "file": "PROJECT/2. PAN Validation/NOTES _ PAN_Validation_Project.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "4. MERGE (upsert)"
+              "title": "NOTES _ PAN_Validation_Project"
             }
           }
         ]
@@ -55,7 +55,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#Task",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -99,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Data Engineering/01 . Data Architecture/4 Delta Lake/4.1 Delta lake Fundamentals/1 DML Statements (Data Manipulation Language)/4. MERGE (upsert).md",
+                "file": "SQL/3. SQL_JOINs_Reference.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -174,7 +174,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300.94140625
+    "width": 300.94140625,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -189,6 +190,22 @@
   },
   "active": "f75418d58a1eba05",
   "lastOpenFiles": [
+    "SQL/4.SQL_Window_Functions_Zomato_Hospital_Guide_Final.md",
+    "SQL/1. SQL Basic.md",
+    "SQL/YouTube Channels.md",
+    "Data Engineering/00 Roadmap.md",
+    "Data Engineering/000_Roadmap/Roadmap->.md",
+    "SQL/3. SQL_JOINs_Reference.md",
+    "SQL/Practice Websites.md",
+    "SQL/Project.md",
+    "SQL/Sub Query ASSIGNMENT 25 AUG.md",
+    "Data Engineering/01 . Data Architecture/1 Data Lake/1 Data Lake.md",
+    "Python/Python_Day1_Basics_Complete_Training_Guide_Final.md",
+    "Python/Untitled Python  Day 2 Operators & Type Conversion.md",
+    "Python/Python_Symbols_and_Operators_Cheat_Sheet.pdf",
+    "PySpark/pySpark.md",
+    "Data Engineering/01 . Data Architecture/4 Delta Lake/4.1 Delta lake Fundamentals/1 DML Statements (Data Manipulation Language)/4. MERGE (upsert).md",
+    "Data Engineering/01 . Data Architecture/4 Delta Lake/4.1 Delta lake Fundamentals/1 DML Statements (Data Manipulation Language)/3. DELETE — Remove Existing Rows.md",
     "PROJECT/2. PAN Validation/NOTES _ PAN_Validation_Project.md",
     "PROJECT/2. PAN Validation/PAN Card Validation in SQL - Scripts/Project Script.md",
     "PROJECT/2. PAN Validation/PAN Card Validation in SQL - Scripts/Problem Statement.pdf",
@@ -202,30 +219,14 @@
     "PROJECT/1. FinVault_Data_Platform_Cursor_Docs/04_PHASE_3_PYSPARK_LOCAL.md",
     "PROJECT/1. FinVault_Data_Platform_Cursor_Docs/03_PHASE_2_INGESTION.md",
     "PROJECT/1. FinVault_Data_Platform_Cursor_Docs/02_PHASE_1_APPLICATION.md",
-    "PROJECT/1. FinVault_Data_Platform_Cursor_Docs/01_PHASE_0_FOUNDATION.md",
-    "PROJECT/1. FinVault_Data_Platform_Cursor_Docs/00_MASTER_PROJECT.md",
-    "PySpark/pySpark.md",
     "Azure Notes/Azure_Data_Engineering_Notes_Chapters_1_to_3.pdf",
-    "SQL/YouTube Channels.md",
-    "PySpark Tutorial Notes.md",
-    "Databricks Architecture.md",
-    "SQL/Sub Query ASSIGNMENT 25 AUG.md",
-    "SQL/Project.md",
-    "SQL/Practice Websites.md",
-    "SQL/4.SQL_Window_Functions_Zomato_Hospital_Guide_Final.md",
-    "SQL/3. SQL_JOINs_Reference.md",
-    "SQL/2.  SQL_Data_Modelling_Complete_Training_Guide.md",
-    "SQL/1. SQL Basic.md",
     "Azure Notes",
-    "Data Engineering/00 Roadmap.md",
-    "Data Engineering/data-pipeline-learning-notes_1.md",
     "Untitled.canvas",
     "attachments/Azure_Data_Engineering_Notes_Chapters_1_to_3.docx",
     "attachments",
     "Azure_Data_Engineering_Notes_Chapters_1_to_3 1.docx",
     "Azure_Data_Engineering_Notes_Chapters_1_to_3.docx",
     "Untitled 1.canvas",
-    "Python/Python_Symbols_and_Operators_Cheat_Sheet.pdf",
     "Data Engineering/01 . Data Architecture/5 Bronze Silver Gold",
     "Data Engineering/01 . Data Architecture/attachments/data-lake-architecture.png",
     "Data Engineering/01 . Data Architecture/attachments/delta-lake-architecture.png",

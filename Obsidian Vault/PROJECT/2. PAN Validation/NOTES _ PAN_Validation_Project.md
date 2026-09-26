@@ -14,6 +14,7 @@ date: 2026-09-04
 > [!info] Goal
 > Clean 10,000 raw PAN entries → validate against format `AAAAA1234A` → categorize Valid/Invalid → summary report. All in PostgreSQL.
 
+
 ## 1. Data Cleaning
 
 ```sql
